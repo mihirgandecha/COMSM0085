@@ -1,0 +1,13 @@
+What is CSS?
+- get used to searching modules on mdn website
+    - eg, for color module: mdm color
+- Check browser compatibility table, eg: mdm font-family browser compatibility
+
+CSS:
+- Rule based language, changing style (PROPERTY | SELECTOR)
+- Works with markup language
+- Cascading: Rules that govern how selectors are prioritised
+
+Getting Started:
+- Add css to html, same folder, + <link rel="stylesheet" href="styles.css" />
+- rel = we have stylesheet; href = location
