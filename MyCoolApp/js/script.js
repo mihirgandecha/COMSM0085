@@ -1,13 +1,11 @@
-const API_URL =XXX
+const API_URL_HOME = "{{API_URL_HOME}}";
+const API_URL = "{{API_URL}}";
 const IMG_PATH = 'https://image.tmdb.org/t/p/w500'
-const SEARCH_API = 'https://api.themoviedb.org/3/search/movie?api_key=XXX&query="'
+const SEARCH_API = 'https://api.themoviedb.org/3/search/movie?api_key=4111aa0c8caf6b688cf21b5cf132327a&query="'js
 
-const IMG_PATH = 'https://image.tmdb.org/t/p/w1280'
-const SEARCH_API = API_URL+'&query="'
-
-const main =  XXX
-const form = XXX
-const search = XXX
+const main = document.getElementById('main');
+const form = document.getElementById('form');
+const search = document.getElementById('search');
 
 function getMovies(url) {
     fetch(url)
@@ -46,19 +44,26 @@ function showMovies(movies) {
 }
 
 function getClassByRate(vote) {
-    
+    if (vote >= 8){
+
+    }
+    if (vote >= 5 && vote < 8){
+
+    }
+    else{
+
+    }
 
 }
 
 // Get initial movies
-getMovies(API_URL_HOME)
+getMovies(API_URL)
 
-form.XXX('submit', (e) => {
+form.addEventListener('submit', (e) => {
     e.preventDefault()
-
     const searchTerm = search.value // we create a var with the search term
 
-    if(searchTerm && searchTerm !== '') { // and if the term exists 
+    if(searchTerm && searchTerm !== '') { // and if the term exists
         getMovies(SEARCH_API + searchTerm)
 
         search.value = ''
