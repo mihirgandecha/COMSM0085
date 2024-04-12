@@ -1,7 +1,6 @@
-const API_URL_HOME = "{{API_URL_HOME}}";
-const API_URL = "{{API_URL}}";
+const API_URL = 'https://api.themoviedb.org/3'
 const IMG_PATH = 'https://image.tmdb.org/t/p/w500'
-const SEARCH_API = 'https://api.themoviedb.org/3/search/movie?api_key=4111aa0c8caf6b688cf21b5cf132327a&query="'js
+const SEARCH_API = 'https://api.themoviedb.org/3/search/movie?api_key=4111aa0c8caf6b688cf21b5cf132327a&query="'
 
 const main = document.getElementById('main');
 const form = document.getElementById('form');
@@ -61,6 +60,7 @@ getMovies(API_URL)
 
 form.addEventListener('submit', (e) => {
     e.preventDefault()
+
     const searchTerm = search.value // we create a var with the search term
 
     if(searchTerm && searchTerm !== '') { // and if the term exists
